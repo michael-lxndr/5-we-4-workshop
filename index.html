@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Presentación del sistema Netplus: requisitos, tecnologías y prototipo de diseño.">
+	<title>Netplus · Presentación del proyecto</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<header class="site-header">
+		<a class="brand" href="#inicio" aria-label="Ir al inicio">
+			<span class="brand-mark">N</span>
+			<span>netplus<span class="brand-dot">.</span></span>
+		</a>
+		<nav class="main-nav" aria-label="Navegación principal">
+			<a href="#requisitos">Requisitos</a>
+			<a href="#tecnologias">Tecnologías</a>
+			<a href="#prototipo">Prototipo</a>
+		</nav>
+		<div class="theme-switcher" role="group" aria-label="Seleccionar tema">
+			<button class="theme-option" type="button" data-theme="light" aria-label="Usar tema claro" title="Claro">
+				<span aria-hidden="true">☼</span><span class="theme-option-label">Claro</span>
+			</button>
+			<button class="theme-option" type="button" data-theme="dark" aria-label="Usar tema oscuro" title="Oscuro">
+				<span aria-hidden="true">◐</span><span class="theme-option-label">Oscuro</span>
+			</button>
+			<button class="theme-option" type="button" data-theme="auto" aria-label="Usar tema automático"
+				title="Automático">
+				<span aria-hidden="true">◌</span><span class="theme-option-label">Auto</span>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="view hero-view" id="inicio" aria-labelledby="hero-title">
+			<div class="hero-copy island">
+				<p class="eyebrow"><span class="eyebrow-line"></span> Ingeniería web · Semana 5</p>
+				<h1 id="hero-title">Una forma más clara de <em>entender</em> los datos.</h1>
+				<p class="hero-lede">Netplus convierte archivos de información en dashboards simples, útiles y listos para
+					tomar mejores decisiones.</p>
+				<div class="hero-actions">
+					<a class="button button-primary" href="#requisitos">Explorar propuesta <span
+							aria-hidden="true">→</span></a>
+					<a class="text-link" href="#prototipo">Ver prototipo <span aria-hidden="true">↗</span></a>
+				</div>
+			</div>
+			<div class="hero-aside island">
+				<div class="mini-window">
+					<div class="window-top"><span></span><span></span><span></span><b>netplus dashboard</b></div>
+					<div class="chart-heading"><span>Resumen mensual</span><strong>+24.8%</strong></div>
+					<div class="chart" aria-label="Gráfico ilustrativo de crecimiento">
+						<i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+					</div>
+					<div class="metric-row"><span>Datos procesados</span><strong>8,420</strong></div>
+				</div>
+				<p class="aside-caption"><span class="caption-icon">✦</span> Datos que cuentan historias</p>
+			</div>
+			<div class="scroll-hint"><span></span> Desliza para descubrir</div>
+		</section>
+
+		<section class="view" id="requisitos" aria-labelledby="requirements-title">
+			<div class="section-intro">
+				<p class="eyebrow"><span class="eyebrow-line"></span> 01 · Alcance</p>
+				<h2 id="requirements-title">Lo que el producto<br><em>debe lograr.</em></h2>
+				<p>Una base concreta para construir una experiencia consistente, segura y fácil de usar.</p>
+			</div>
+			<div class="requirement-grid">
+				<article class="island feature-card functional">
+					<div class="card-icon">✦</div>
+					<p class="card-kicker">Esenciales</p>
+					<h3>Requerimientos funcionales</h3>
+					<ul class="check-list">
+						<li>Autenticar usuarios con roles <strong>admin</strong> y <strong>viewer</strong>.</li>
+						<li>Cargar archivos XLSX y validar hojas y columnas.</li>
+						<li>Importar datasets y mostrar métricas en dashboards.</li>
+						<li>Configurar, publicar y consultar reportes.</li>
+						<li>Registrar acciones importantes en una auditoría.</li>
+					</ul>
+				</article>
+				<article class="island feature-card non-functional">
+					<div class="card-icon">◌</div>
+					<p class="card-kicker">Calidad</p>
+					<h3>Requerimientos no funcionales</h3>
+					<ul class="check-list">
+						<li>Interfaz responsive, accesible y fácil de aprender.</li>
+						<li>Sesiones seguras con cookies protegidas.</li>
+						<li>Validación de tamaño, formato y contenido real.</li>
+						<li>Rendimiento estable con archivos grandes.</li>
+						<li>Despliegue local sin depender de internet.</li>
+					</ul>
+				</article>
+			</div>
+			<div class="quote-strip island"><span>“</span>
+				<p>Menos fricción entre el archivo y la decisión.</p><small>Principio de diseño</small>
+			</div>
+		</section>
+
+		<section class="view technologies-view" id="tecnologias" aria-labelledby="tech-title">
+			<div class="section-intro">
+				<p class="eyebrow"><span class="eyebrow-line"></span> 02 · Arquitectura</p>
+				<h2 id="tech-title">Tecnología con<br><em>un propósito.</em></h2>
+				<p>Un stack preparado para crecer desde una instalación local hasta un sistema multiusuario.</p>
+			</div>
+			<div class="tech-grid">
+				<article class="island tech-card tech-backend">
+					<div class="tech-number">01</div>
+					<h3>Backend</h3>
+					<p>Servicios robustos para procesar, validar y proteger la información.</p>
+					<div class="tag-list"><span>Go 1.24+</span><span>Chi</span><span>Excelize</span><span>SQLC</span></div>
+				</article>
+				<article class="island tech-card tech-frontend">
+					<div class="tech-number">02</div>
+					<h3>Frontend</h3>
+					<p>Una interfaz clara para explorar datos sin perder el contexto.</p>
+					<div class="tag-list"><span>React</span><span>TypeScript</span><span>Vite</span><span>ECharts</span>
+					</div>
+				</article>
+				<article class="island tech-card tech-data">
+					<div class="tech-number">03</div>
+					<h3>Datos & seguridad</h3>
+					<p>Persistencia flexible y controles para cada etapa del flujo.</p>
+					<div class="tag-list"><span>SQLite</span><span>PostgreSQL</span><span>Redis</span><span>HTTPS</span>
+					</div>
+				</article>
+			</div>
+			<div class="stack-note"><span class="status-pulse"></span><strong>Local primero.</strong> La arquitectura puede
+				evolucionar sin duplicar la lógica de negocio.</div>
+		</section>
+
+		<section class="view prototype-view" id="prototipo" aria-labelledby="prototype-title">
+			<div class="section-intro">
+				<p class="eyebrow"><span class="eyebrow-line"></span> 03 · Dirección visual</p>
+				<h2 id="prototype-title">El diseño, antes<br>de <em>construirlo.</em></h2>
+				<p>Explora el prototipo interactivo y valida la experiencia antes de convertirla en producto.</p>
+			</div>
+			<div class="island figma-frame">
+				<iframe title="Prototipo de diseño Netplus en Figma"
+					src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fa7QDg4OEHfnb5ch4bqEiie%2FNetPlus-%25E2%2580%2594-Dashboard-de-N%25C3%25B3mina-%25C2%25B7-V1%3Fnode-id%3D0-1%26m%3Ddev%26t%3D65mocphE4NKRXISh-1"
+					allowfullscreen>
+				</iframe>
+				<div class="figma-fallback">
+					<span class="fallback-icon">⌁</span>
+					<strong>Prototipo de Figma</strong>
+					<span>Prototipo interactivo de Netplus en Figma.</span>
+				</div>
+			</div>
+			<div class="prototype-footer"><span>Hecho para presentar una idea con claridad.</span><a href="#inicio">Volver
+					arriba ↑</a></div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<span class="brand"><span class="brand-mark">N</span><span>netplus<span class="brand-dot">.</span></span></span>
+		<span>Ingeniería Web · 2025</span>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
