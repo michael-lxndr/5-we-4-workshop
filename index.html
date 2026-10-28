@@ -21,16 +21,18 @@
 			<a href="#prototipo">Prototipo</a>
 		</nav>
 		<div class="theme-switcher" role="group" aria-label="Seleccionar tema">
-			<button class="theme-option" type="button" data-theme="light" aria-label="Usar tema claro" title="Claro">
+			<input class="theme-input" type="radio" name="theme" id="theme-light">
+			<label class="theme-option" for="theme-light" title="Claro">
 				<span aria-hidden="true">☼</span><span class="theme-option-label">Claro</span>
-			</button>
-			<button class="theme-option" type="button" data-theme="dark" aria-label="Usar tema oscuro" title="Oscuro">
+			</label>
+			<input class="theme-input" type="radio" name="theme" id="theme-dark">
+			<label class="theme-option" for="theme-dark" title="Oscuro">
 				<span aria-hidden="true">◐</span><span class="theme-option-label">Oscuro</span>
-			</button>
-			<button class="theme-option" type="button" data-theme="auto" aria-label="Usar tema automático"
-				title="Automático">
+			</label>
+			<input class="theme-input" type="radio" name="theme" id="theme-auto" checked>
+			<label class="theme-option" for="theme-auto" title="Automático">
 				<span aria-hidden="true">◌</span><span class="theme-option-label">Auto</span>
-			</button>
+			</label>
 		</div>
 	</header>
 
@@ -156,7 +158,6 @@
 		<span class="brand"><span class="brand-mark">N</span><span>netplus<span class="brand-dot">.</span></span></span>
 		<span>Ingeniería Web · 2025</span>
 	</footer>
-	<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
 	--header-height: 84px;
 }
 
-html[data-theme="light"] {
+html:has(#theme-light:checked) {
 	color-scheme: light;
 	--ink: #202021;
 	--muted: #6f6a73;
@@ -25,7 +25,7 @@ html[data-theme="light"] {
 	--shadow: 0 24px 70px rgba(58, 34, 62, .1);
 }
 
-html[data-theme="dark"] {
+html:has(#theme-dark:checked) {
 	color-scheme: dark;
 	--ink: #f4eef5;
 	--muted: #b7acba;
@@ -45,10 +45,6 @@ html[data-theme="dark"] {
 		--shadow: 0 24px 70px rgba(0, 0, 0, .28);
 	}
 
-	html[data-theme="light"] .mode-label,
-	html[data-theme="dark"] .mode-label {
-		display: none;
-	}
 }
 
 * {
@@ -132,13 +128,6 @@ a {
 	color: var(--purple);
 }
 
-.mode-label {
-	align-items: center;
-	display: flex;
-	gap: 7px;
-}
-
-.mode-dot,
 .status-pulse {
 	background: var(--olive);
 	border-radius: 50%;
@@ -157,6 +146,13 @@ a {
 	padding: 3px;
 }
 
+.theme-input {
+	height: 1px;
+	opacity: 0;
+	position: absolute;
+	width: 1px;
+}
+
 .theme-option {
 	align-items: center;
 	background: transparent;
@@ -171,11 +167,19 @@ a {
 	transition: background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 
+.theme-option:focus-visible {
+	outline: 2px solid var(--olive);
+	outline-offset: 2px;
+}
+
 .theme-option:hover {
 	color: var(--purple);
 }
 
-.theme-option.is-active {
+html:not(:has(#theme-light:checked)):not(:has(#theme-dark:checked)) #theme-auto + .theme-option,
+html:has(#theme-auto:checked) #theme-auto + .theme-option,
+html:has(#theme-light:checked) #theme-light + .theme-option,
+html:has(#theme-dark:checked) #theme-dark + .theme-option {
 	background: var(--island);
 	box-shadow: 0 2px 8px rgba(40, 20, 45, .12);
 	color: var(--purple);
